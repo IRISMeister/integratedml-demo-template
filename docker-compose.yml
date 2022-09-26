@@ -7,6 +7,8 @@ services:
       context: ./iris-aa-server
     image: iris-aa-server:2021.2
     hostname: irisimlsvr
+    command:
+      --check-caps false   
     restart: on-failure
     ports:
     - 8091:1972 # 1972 is the superserver default port
